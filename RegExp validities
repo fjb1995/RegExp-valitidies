@@ -1,3 +1,14 @@
+TextFormField(
+validator: (index) {
+if (index!.isEmpty) {
+return "Invalid price value";
+} else if (index.isValidAmount() != true) {
+return "Invalid price value";
+}
+return null;
+},
+
+//*******************************//
 
 extension AmountValidator on String {
   bool isValidAmount() {
