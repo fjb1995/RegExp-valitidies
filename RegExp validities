@@ -1,0 +1,18 @@
+
+extension AmountValidator on String {
+  bool isValidAmount() {
+    return RegExp(r'^[1-9][0-9]*$').hasMatch(this);
+  }
+}
+
+extension CommissionValidator on String {
+  bool isValidCommission() {
+    return RegExp(r'^[1-9][0-9]*$').hasMatch(this);
+  }
+}
+
+extension PhoneValidator on String {
+  bool isValidPhone() {
+    return RegExp(r'^(?:[+0]9)?[0-9]{10}$').hasMatch(this);
+  }
+}
